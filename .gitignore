@@ -1,1 +1,5 @@
 /target
+/dist
+/examples/simple/dist
+/examples/simple/target
+
