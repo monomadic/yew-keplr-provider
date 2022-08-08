@@ -103,8 +103,8 @@ impl UseKeplrHandle {
     }
 
     pub fn display_address(&self) -> String {
-        //self.accounts.as_ref();
-        String::from("Ok")
+        self.accounts.as_str().to_owned()
+        //String::from("Ok")
     }
 }
 
