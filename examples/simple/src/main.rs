@@ -1,6 +1,6 @@
 use yew::prelude::*;
 use yew_keplr_provider::{
-    chain, AccountLabel, ConnectButton, KeplrContextProvider, SwitchNetworkButton,
+    chain, AccountLabel, ConnectButton, KeplrContextProvider, SwitchNetworkButton,SelectChain
 };
 
 
@@ -18,9 +18,11 @@ pub fn App() -> Html {
         <div class="p-5">
             <KeplrContextProvider>
                 <ConnectButton {disconnected}>
-                    <button class="btn btn-success">{"Connect"}</button>
+                    <button class="btn btn-success mb-2">{"Connect"}</button>
                 </ConnectButton>
                 <AccountLabel />
+                <SelectChain />
+                
             </KeplrContextProvider>
         </div>
     }

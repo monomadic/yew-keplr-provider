@@ -17,22 +17,22 @@ use web3::transports::eip_1193::Chain;
     "native_currency": "OSMO"
 
 */
-pub fn kelpr() -> Chain {
+pub fn cosmoshub() -> Chain {
     Chain {
-        chain_id: "0x1".into(),
-        chain_name: "Ethereum".into(),
-        rpc_urls: [String::from("https://api.avax-test.network/ext/bc/C/rpc")],
-        native_currency: base_currency::eth(),
+        chain_id: "cosmoshub-4".into(),
+        chain_name: "COSMOS HUB".into(),
+        rpc_urls: [String::from("https://cosmos-rpc.quickapi.com:443")],
+        native_currency: base_currency::atom(),
         block_explorer_urls: Some([String::from("https://api.avax-test.network/ext/bc/C/rpc")]),
     }
 }
 
-pub fn avalanche_testnet() -> Chain {
+pub fn osmosis() -> Chain {
     Chain {
-        chain_name: String::from("Avalanche Fuji Testnet"),
-        chain_id: String::from("0xA869"),
-        rpc_urls: [String::from("https://api.avax-test.network/ext/bc/C/rpc")],
-        native_currency: base_currency::avax(),
+        chain_id: String::from("osmosis"),
+        chain_name: String::from("OSMOSIS"),
+        rpc_urls: [String::from("https://osmosis-rpc.quickapi.com:443")],
+        native_currency: base_currency::osmo(),
         block_explorer_urls: Some([String::from("https://api.avax-test.network/ext/bc/C/rpc")]),
     }
 }
