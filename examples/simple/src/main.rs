@@ -15,10 +15,10 @@ pub fn App() -> Html {
 
     
     html! {
-        <div>
+        <div class="p-5">
             <KeplrContextProvider>
                 <ConnectButton {disconnected}>
-                    <button>{"Connect"}</button>
+                    <button class="btn btn-success">{"Connect"}</button>
                 </ConnectButton>
                 <AccountLabel />
             </KeplrContextProvider>
