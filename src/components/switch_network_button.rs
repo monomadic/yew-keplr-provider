@@ -13,18 +13,18 @@ pub struct Props {
 
 #[function_component]
 pub fn SwitchNetworkButton(props: &Props) -> Html {
-    let _keplr = use_context::<UseKeplrHandle>()
+    let keplr = use_context::<UseKeplrHandle>()
         .expect("no keplr provider found. you must wrap your components in an <Keplr/>");
 
-    let _chain = props.chain.clone();
+    let chain = props.chain.clone();
 
     let on_click = {
         Callback::from(move |_| {
-            //let keplr = keplr.clone();
-            //let chain = chain.clone();
+            let keplr = keplr.clone();
+            let chain = chain.clone();
             spawn_local(async move {
-                //let _ = keplr.switch_chain_with_fallback(chain).await;
-                //let _ = keplr.switch_chain_with_fallback(&chain).await;
+                //let _ = ethereum.switch_chain_with_fallback(chain).await;
+                let _ = keplr.switch_chain_with_fallback(&chain).await;
             });
         })
     };

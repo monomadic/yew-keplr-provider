@@ -21,8 +21,8 @@ pub fn App() -> Html {
                     <button class="btn btn-success mb-2">{"Connect"}</button>
                 </ConnectButton>
                 <AccountLabel />
-                <SelectChain />
-                
+                <SwitchNetworkButton chain={chain::cosmoshub()}/>
+                <SwitchNetworkButton chain={chain::osmosis()}/>
             </KeplrContextProvider>
         </div>
     }
