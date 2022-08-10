@@ -3,7 +3,7 @@ use yew::prelude::*;
 
 #[function_component]
 pub fn SelectChain() -> Html {
-    let keplr = use_context::<UseKeplrHandle>()
+    let _keplr = use_context::<UseKeplrHandle>()
         .expect("no keplr provider found. you must wrap your components in an <KeplrProvider/>");
 
     html! {

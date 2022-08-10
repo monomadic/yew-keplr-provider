@@ -1,6 +1,6 @@
 use yew::prelude::*;
 use yew_keplr_provider::{
-    chain, AccountLabel, ConnectButton, KeplrContextProvider, SwitchNetworkButton,SelectChain
+    chain, AccountLabel, ConnectButton, KeplrContextProvider, SwitchNetworkButton
 };
 
 
